@@ -29,11 +29,6 @@
       "title": "Estudar inglês",
       "completed": false,
       "id": 6
-    },
-    {
-      "title": "Colcoar em prática Vue3",
-      "completed": false,
-      "id": 7
     }
   ]
 }
