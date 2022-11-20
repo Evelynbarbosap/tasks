@@ -13,8 +13,14 @@ export default createStore({
     },
 
     storeTodo(state, payload){
-      state.todos.push(payload)
-  }
+      const index = state.todos.findIndex(todo => todo.id === payload.id)
+      if (index >= 0) {
+        state.todos.splice(index, 1, payload)
+
+      } else {
+        state.todos.push(payload)
+      }
+    }
   },
   actions: {
     getTodos({commit}) {
@@ -28,9 +34,9 @@ export default createStore({
       axios.post('http://localhost:3000/todos', data).then((response) => commit('storeTodo',response.data));
     },
 
-    updateTodo(context, {id, data}) {
-      return axios.put(`http://localhost:3000/todos/${id}`, data)
-    }
+    updateTodo({commit}, {id, data}) {
+      return axios.put(`http://localhost:3000/todos/${id}`, data).then((response) => commit('storeTodo', response.data));
+    },
 
   },
   modules: {
