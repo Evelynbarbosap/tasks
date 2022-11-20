@@ -2,18 +2,8 @@
   "todos": [
     {
       "title": "Estudar inglês",
-      "completed": false,
+      "completed": true,
       "id": 1
-    },
-    {
-      "title": "Estudar FastAPI",
-      "completed": false,
-      "id": 2
-    },
-    {
-      "title": "Estudar Vue3 com Tailwind",
-      "completed": false,
-      "id": 3
     }
   ]
 }
