@@ -1,19 +1,39 @@
 {
-    "todos": [
-      {
-        "id": 1,
-        "title": "Estudar javascript",
-        "completed": true
-      },
-      {
-        "id": 2,
-        "title": "Estudar Vue",
-        "completed": false
-      },
-      {
-        "id": 3,
-        "title": "Estudar composition API",
-        "completed": false
-      }
-    ]
-  }
+  "todos": [
+    {
+      "id": 1,
+      "title": "Estudar javascript",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "title": "Estudar Vue",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "title": "Estudar composition API",
+      "completed": false
+    },
+    {
+      "title": "Estudar python",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "title": "Estudar python",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "title": "Estudar inglês",
+      "completed": false,
+      "id": 6
+    },
+    {
+      "title": "Colcoar em prática Vue3",
+      "completed": false,
+      "id": 7
+    }
+  ]
+}
