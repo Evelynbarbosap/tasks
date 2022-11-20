@@ -18,7 +18,7 @@ import TodoSpinner from '@/components/TodoSpinner';
 import TodoFormAdd from '@/components/TodoFormAdd';
 import TodoItems from '@/components/TodoItems';
 import TodoEmpty from '@/components/TodoEmpty';
-import axios from 'axios'
+
 export default {
     name: 'App',
     components:{TodoSpinner, TodoFormAdd, TodoItems, TodoEmpty},
@@ -27,14 +27,13 @@ export default {
             loading: false
         }
     },
+
     created() {
         this.loading = true
-        axios.get('http://localhost:3000/todos')
-        .then((response) => {
-            this.$store.commit('storeTodos', response.data)
+        this.$store.dispatch('getTodos').finally(() => {
+            this.loading = false
         })
-        .finally(() => {this.loading = false})
-    },
-}
+    }
+}    
 </script>
 
